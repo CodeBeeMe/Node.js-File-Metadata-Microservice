@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+     <title>File Metadata</title>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+     <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet" type="text/css">
+     <link href="/public/style.css" rel="stylesheet" type="text/css">
+  </head>
+  
+  <body>
+    <div id="title">
+      <h6>APIs and Microservices Projects:</h6>
+      <h1>05. File Metadata Microservice</h1>
+    </div>
+    <div class="container">
+      <div id="content">
+        <div class="section">
+          <h2>User Stories:</h2>
+          <ol class="user-stories">
+            <li>I can submit a form object that includes a file upload.</li>
+            <li>The from file input field  has the "name" attribute set to "upfile". We rely on this in testing.</li>
+            <li>When I submit something, I will receive the file name, and size in bytes within the JSON response.</li>
+          </ol>
+          <h2>Example Output:</h2>
+           <p>
+             <code>{"name":"filename.jpg","type":"image/jpeg","size":232098}</code>
+           </p>
+        </div>
+        <div class="section upload">
+          <h2>Usage:</h2>
+          <p><code>POST /api/fileanalyse</code></p>
+          <p>Please upload a file:</p>
+          <h4 id="output"></h4>
+          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+            <input id="inputfield" type="file" name="upfile">
+            <input id="button" type="submit" value="UPLOAD">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <h5>Designed and coded by <a href="https://github.com/Madness2aMaze" target="_blank" id="footbar" title="©2019 Cătălin Anghel-Ursu @Madness2aMaze - All Rights Reserved">@Madness2aMaze ©2019 - All Rights Reserved</a> | <a href="https://codepen.io/Madness2aMaze/"
+          title="More of my works" target="_blank"><i class="fab fa-codepen"></i></a> | <a href="https://www.freecodecamp.com/" target="_blank" title="FreeCodeCamp"><i class="fab fa-free-code-camp"></i></a>
+      </h5>
+    </div>
+  </body>
+
+</html>
