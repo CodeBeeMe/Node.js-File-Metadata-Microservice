@@ -6,9 +6,9 @@ const upload = multer().single('upfile');
 
 //getting the metadata info from the uploaded file
 router.post('/fileanalyse', (req, res, next) => {
-  const file = req.file;
-  console.log(file);
   upload(req, res, (err) => {
+    const file = req.file;
+    console.log(file);
     if (err instanceof multer.MulterError) {
       // A Multer error occurred when uploading.
       next(err);
